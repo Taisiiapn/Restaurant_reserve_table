@@ -1,0 +1,19 @@
+.main {
+
+  &__logo {
+    display: block;
+    margin: 25px 0 30px 8%;
+    width: 100px;
+    height: 100px;
+  }
+
+  &__menu-wrapper {
+    padding: 40px;
+  }
+
+  &__menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-gap: 15px;
+  }
+}
