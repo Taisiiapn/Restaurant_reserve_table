@@ -81,29 +81,27 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
-// const uglify = require('gulp-uglify');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-
 sass.compiler = require('node-sass');
 
 // порядок подключения css
 const cssFiles = [
   './src/css/main.scss',
   './src/css/menu.scss',
-  './src/css/gallery.scss',
+  './src/css/booking.scss',
   './src/css/contact.scss',
-  './src/css/footer.scss',
   './src/css/media.scss'
 ]
 
 // порядок подключения js
 const jsFiles = [
   './src/js/lib.js',
-  './src/js/header.js',
-  './src/js/gallery.js',
-  './src/js/main.js'
+  './src/js/main.js',
+  './src/js/menu.js',
+  './src/js/booking.js',
+  './src/js/contact.js'
 ]
 
 function styles() { // task for styles
@@ -122,9 +120,6 @@ function styles() { // task for styles
 function scripts() { // task for scripts
   return gulp.src(jsFiles)
   .pipe(concat('script.js'))
-  // .pipe(uglify({
-  //   toplevel: true
-  // }))
   .pipe(gulp.dest('./build/js'))
   .pipe(browserSync.stream());
 }
@@ -142,10 +137,10 @@ function watch() {
   // следить за css / js / html
   gulp.watch('./src/css/**/*.scss', styles)
   gulp.watch('./src/js/**/*.js', scripts)
-  gulp.watch("./*.html").on('change', browserSync.reload);
+  gulp.watch('./*.html').on('change', browserSync.reload);
 }
 
-//вызывает ф-ии styles / scripts
+// вызывает ф-ии styles / scripts
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 

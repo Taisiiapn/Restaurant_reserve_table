@@ -7,7 +7,6 @@ body {
   position: relative;
 
   &__slider-wrapper {
-    border: 1px solid black;
     width: 100%;
     height: 600px;
     position: relative;
@@ -59,21 +58,21 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: normal;
     font-family: 'Courier New', Courier, monospace;
   }
 
   &__logo {
     width: 100px;
-    height: 100px;;
+    height: 100px;
   }
 
   &__nav ul {
     margin: auto;
     display: grid;
     grid-template-columns: auto 6px auto 6px auto 6px auto;
-    grid-template-rows: 60px;
+    grid-template-rows: 30px;
   }
 
   &__nav ul li {
@@ -84,28 +83,23 @@ body {
 
   &__nav ul li a {
     text-decoration: none;
-    line-height: 60px;
-    color: #6c634a;
+    line-height: 30px;
+    color: #99854d;
     margin: 0 15px;
     cursor: pointer;
   }
 
   &__nav-line {
     background-color: #fff;
-    line-height: 60px;
+    line-height: 30px;
   }
 }
 
-.article {
+.main {
   text-align: center;
 
-  &__wrapper {
-    // display: flex;
-    padding: 60px;
-  }
-
   &__container {
-    // width: 60%;
+    padding: 60px;
   }
 
   &__title {
@@ -119,8 +113,89 @@ body {
     font-size: 25px;
   }
 
-  &__img {
-    width: 200px;
+  &__slider-wrapper {
+    border: 1px solid black;
+    margin: auto;
+    width: 300px;
+    height: 250px;
+    position: relative;
+  }
+
+  &__slider-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__slider-container img {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    transition: all ease 1s;
+  }
+
+  &__slider-container &__opacity0 {
+    opacity: 0;
+  }
+
+  &__slider-btn--left {
+    background: url(/src/images/btn-left.png);
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 42%;
+    left: 5px;
+    cursor: pointer;
+  }
+
+  &__slider-btn--right {
+    background: url(/src/images/btn-right.png);
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 42%;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  // &__chef-description {
+  //   font-size: 30px;
+  //   display: none;
+  // }
+
+  // &__img:hover &__chef-description {
+  //   display: block;
+  // }
+}
+
+.footer {
+  background-color: #071625;
+  color: #99854d;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+
+  &__network a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__network a:nth-child(odd) {
+    margin: 0 15px;
+  }
+
+  &__map div {
+    width: 300px;
     height: 200px;
+    position: relative;
+    overflow: hidden;
   }
 }

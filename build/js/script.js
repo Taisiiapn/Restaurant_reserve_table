@@ -31,7 +31,7 @@
 
 
 
-
+// --------------------------sliders
 
 let images = document.querySelectorAll('.header__slider-container img');
 let current = 0;
@@ -91,3 +91,4 @@ mainBtnRight.onclick = function() {
   }
   gallerySlider();
 };
+

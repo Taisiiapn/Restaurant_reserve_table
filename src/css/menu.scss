@@ -1,19 +1,92 @@
-.main {
+.menu-header {
 
-  &__logo {
+  &__logo img {
+    width: 150px;
+    height: 150px;
+    margin: 20px 0 0;
+    cursor: pointer;
+  }
+
+  // &__wrapper {}
+
+  &__search {
+    position: relative;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+
+  &__search-form {
+    width: 100%;
+    height: 48px;
+    padding: 0 0 0 30px;
+    border: 0;
+    border-bottom: 1px solid #757575;
+    opacity: 0.6;
+    font-size: 18px;
+    color: black;
+  }
+
+  &__search-btn {
     display: block;
-    margin: 25px 0 30px 8%;
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 20px;
+    border: none;
+    color: #49a144;
+    font-weight: 700;
+    background-color: white;
+    cursor: pointer;
   }
+}
 
-  &__menu-wrapper {
+.menu-main {
+
+  &__restaurant {
     padding: 40px;
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
-  &__menu-container {
-    display: grid;
-    grid-template-columns: repeat(4, 150px);
-    grid-gap: 15px;
+  &__item {
+    padding: 0 0 20px;
+    cursor: pointer;
   }
+
+  &__item:hover {
+    transform: translate(0, -100px);
+    border: 1px solid black;
+  }
+
+  &__image {
+    width: 330px;
+    height: 220px;
+    border-radius: 5px;
+  }
+
+  &__title {
+    margin-top: 16px;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #1d1d1d;
+    text-align: center;
+  }
+
+  &__weight {
+    padding: 15px;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 21px;
+    color: #626262;
+    margin: 4px auto 0;
+    text-align: center;
+    border: 1px solid black;
+    width: 25%;
+  }
+
+
+  
 }
