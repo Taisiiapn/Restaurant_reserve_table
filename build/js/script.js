@@ -91,4 +91,3 @@ mainBtnRight.onclick = function() {
   }
   gallerySlider();
 };
-

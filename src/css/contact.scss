@@ -1,0 +1,86 @@
+.contact-header {
+  margin-bottom: 50px;
+
+  &__nav {
+    display: flex;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  &__logo {
+    width: 150px;
+    height: 120px;
+  }
+
+  &__nav ul {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 6px auto 6px auto 6px auto;
+    grid-template-rows: 50px;
+  }
+
+  &__nav ul li {
+    padding: 10px;
+    list-style: none;
+    text-transform: uppercase;
+    background-color: #071625;
+  }
+
+  &__nav ul > li:hover,
+  &__nav ul ul > li:hover {
+    background-color: #183553;
+    cursor: pointer;
+  }
+
+  &__nav ul ul {
+    display: none;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &__nav ul li:hover ul {
+    display: inline-block;
+  }
+
+  &__nav ul li {
+    width: 240px;
+    text-align: center;
+  }
+
+  &__nav ul li a {
+    text-decoration: none;
+    line-height: 30px;
+    color: #99854d;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+
+  &__nav-line {
+    background-color: #fff;
+    line-height: 30px;
+  }
+}
+
+.contact-main {
+  background-color: #99854d;
+  border: 3px solid #071625;
+  color: #071625;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  font-size: 25px;
+  font-weight: bold;
+  box-sizing: border-box;
+
+  &__network a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__network a:nth-child(odd) {
+    margin: 0 15px;
+  }
+}

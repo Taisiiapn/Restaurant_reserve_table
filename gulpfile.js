@@ -100,8 +100,7 @@ const jsFiles = [
   './src/js/lib.js',
   './src/js/main.js',
   './src/js/menu.js',
-  './src/js/booking.js',
-  './src/js/contact.js'
+  './src/js/booking.js'
 ]
 
 function styles() { // task for styles

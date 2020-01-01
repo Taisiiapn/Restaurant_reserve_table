@@ -1,34 +1,94 @@
 .booking-header {
-
-  &__wrapper {
-    margin: 20px 0 30px; 
-  }
   
+  &__nav {
+    display: flex;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
   &__logo img {
     width: 150px;
-    height: 150px;
+    height: 120px;
+  }
+
+  &__nav ul {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 6px auto 6px auto 6px auto;
+    grid-template-rows: 50px;
+  }
+
+  &__nav ul li {
+    padding: 10px;
+    list-style: none;
+    text-transform: uppercase;
+    background-color: #071625;
+  }
+
+  &__nav ul > li:hover,
+  &__nav ul ul > li:hover {
+    background-color: #183553;
     cursor: pointer;
+  }
+
+  &__nav ul ul {
+    display: none;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &__nav ul li:hover ul {
+    display: flex;
+  }
+
+  &__nav ul li {
+    width: 240px;
+    text-align: center;
+  }
+
+  &__nav ul li a {
+    text-decoration: none;
+    line-height: 30px;
+    color: #99854d;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+
+  &__nav-line {
+    background-color: #fff;
+    line-height: 30px;
   }
 }
 
 .booking-main {
+  margin: 60px auto 20px;
+  width: 790px;
+  
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 250px);
     grid-row-gap: 20px;
+    grid-column-gap: 20px;
   }
-
+  
   &__table {
+    box-sizing: border-box;
+    cursor: pointer;
     background-color: aquamarine;
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    font-size: 60px;
-    text-align: center;
-    line-height: 60px;
+    height: 250px;
+    border: 1px solid rgb(7, 115, 119);
   }
 
   &__table-8 {
     grid-column-end: 4;
+  }
+
+  &__table p {
+    font-size: 30px;
+    text-align: center;
+    line-height: 45px;
   }
 }
