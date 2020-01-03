@@ -66,6 +66,7 @@
 .booking-main {
   margin: 60px auto 20px;
   width: 790px;
+  display: block;
   
   &__wrapper {
     display: grid;
@@ -79,6 +80,7 @@
     cursor: pointer;
     background-color: aquamarine;
     height: 250px;
+    width: 100%;
     border: 1px solid rgb(7, 115, 119);
   }
 

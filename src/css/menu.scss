@@ -3,8 +3,8 @@
   &__logo img {
     width: 150px;
     height: 150px;
-    margin: 20px 0 0;
     cursor: pointer;
+    margin: 20px 0 0 21px;
   }
 
   &__nav {
@@ -72,7 +72,7 @@
   &__search {
     position: relative;
     margin: 85px auto 0;
-    width: 1058px;
+    width: 96%;
     cursor: pointer;
   }
 
@@ -143,6 +143,7 @@
     margin: 4px auto 0;
     text-align: center;
     border: 1px solid black;
+    border-radius: 5px;
     width: 25%;
   }
 
@@ -150,7 +151,24 @@
     color: #99854d;
     background-color: #071625;
   }
+}
 
+.footer {
+  background-color: #071625;
+  color: #99854d;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
 
-  
+  &__network a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__network a:nth-child(odd) {
+    margin: 0 15px;
+  }
 }

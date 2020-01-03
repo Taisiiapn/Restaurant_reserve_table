@@ -1,0 +1,278 @@
+//_____________index.html
+@media (max-width: 600px) {
+  .footer {
+    display: block;
+  }
+
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .footer {
+    display: flex;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    &__nav {
+      font-size: 25px;
+    }
+
+    &__nav ul {
+      margin: auto;
+      display: inline-block;
+    }
+
+    &__nav ul ul {
+      padding: 0;
+    }
+
+    &__nav ul li {
+      width: auto;
+    }
+  }
+
+  .footer {
+    &__map {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1010px) {
+  .header {
+    &__nav {
+      font-size: 25px;
+    }
+
+    &__nav ul {
+      margin: auto;
+      display: inline-block;
+    }
+
+    &__nav ul ul {
+      padding: 0;
+    }
+
+    &__nav ul li {
+      width: auto;
+    }
+  }
+}
+
+//_______________menu.html
+@media (max-width: 600px) {
+  .menu-main {
+    width: 330px;
+    margin: auto;
+    display: block;
+
+    &__restaurant {
+      grid-template-columns: 330px;
+      padding: 0;
+    }
+
+    &__image {
+      margin: auto;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .menu-main {
+    width: 595px;
+    margin: 30px auto 0;
+
+    &__restaurant {
+      grid-template-columns: repeat(2, 290px);
+      padding: 0;
+    }
+
+    &__image {
+      width: 290px;
+      height: 190px;
+      margin: auto;
+      display: block;
+    }
+  }
+
+  .footer {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu-header {
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__logo img {
+      margin: 0;
+    }
+
+    &__nav {
+      font-size: 25px;
+      margin: 0;
+    }
+
+    &__nav ul {
+      margin: auto;
+      display: inline-block;
+    }
+
+    &__nav ul ul {
+      padding: 0;
+    }
+
+    &__nav ul li {
+      width: auto;
+      display: grid;
+    }
+
+    &__nav ul li:hover ul {
+      display: inline-block;
+    }
+
+    &__search {
+      margin: 20px auto 0;
+    }
+  }
+}
+
+//_______________booking.html
+@media (max-width: 600px) {
+  .booking-main {
+    width: 55%;
+    margin: 20px auto 0;
+
+    &__wrapper {
+      display: block;
+    }
+
+    &__table {
+      margin: auto;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .booking-main {
+    width: 420px;
+    display: block;
+    margin: 20px auto 0;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+    }
+
+    &__table {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__table-8 {
+      grid-column-end: 3;
+    }
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+  .booking-header {
+
+    &__nav {
+      font-size: 25px;
+      margin: 0;
+    }
+
+    &__logo {
+      margin-left: auto;
+    }
+
+    &__nav ul {
+      margin: auto;
+      padding: 0;
+      display: inline-block;
+    }
+
+    &__nav ul ul {
+      padding: 0;
+    }
+
+    &__nav ul li {
+      width: auto;
+      display: grid;
+    }
+
+    &__nav ul li:hover ul {
+      display: inline-block;
+    }
+  }
+  
+  .booking-main {
+    width: 640px;
+    display: block;
+    margin: 20px auto 0;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+    }
+
+    &__table {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__table-8 {
+      // grid-column-end: ;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .booking-header {
+
+    &__nav {
+      font-size: 25px;
+      margin: 0;
+    }
+
+    &__logo {
+      margin-left: auto;
+    }
+
+    &__nav ul {
+      margin: auto;
+      padding: 0;
+      display: inline-block;
+    }
+
+    &__nav ul ul {
+      padding: 0;
+    }
+
+    &__nav ul li {
+      width: auto;
+      display: grid;
+    }
+
+    &__nav ul li:hover ul {
+      display: inline-block;
+    }
+  }
+}
+
+//_______________contact.html
+@media (max-width: 600px) {
+  .contact-header {}
+
+  .contact-main {
+    display: block;
+  }
+} 
