@@ -218,3 +218,97 @@ body {
     margin: 0 15px;
   }
 }
+
+.main-header {
+
+  &__nav {
+    display: flex;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  &__logo img {
+    width: 150px;
+    height: 120px;
+    margin: 10px 0 auto 10px;
+  }
+
+  &__logo:hover img {
+    transform: scale(0.9, 0.9);
+  }
+
+  &__nav ul {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 6px auto 6px auto 6px auto;
+    grid-template-rows: 50px;
+  }
+
+  &__nav ul li {
+    padding: 10px;
+    list-style: none;
+    text-transform: uppercase;
+    background-color: #071625;
+    z-index: 1;
+  }
+
+  &__nav ul > li:hover,
+  &__nav ul ul > li:hover {
+    background-color: #183553;
+    cursor: pointer;
+  }
+
+  &__nav ul ul {
+    display: none;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &__nav ul li:hover ul {
+    display: block;
+    padding: 0;
+  }
+
+  &__nav ul li {
+    width: 240px;
+    text-align: center;
+  }
+
+  &__nav ul li a {
+    text-decoration: none;
+    line-height: 30px;
+    color: #99854d;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+
+  &__nav ul li {
+    color: #99854d;
+  }
+
+  &__nav-line {
+    background-color: #fff;
+    line-height: 30px;
+  }
+}
+
+.main-footer {
+  background-color: #071625;
+  color: #99854d;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+
+  &__network a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__network a:nth-child(odd) {
+    margin: 0 15px;
+  }
+}

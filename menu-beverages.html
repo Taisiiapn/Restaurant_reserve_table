@@ -9,45 +9,39 @@
 </head>
 <body>
   
-  <header class="menu-header">
+  <header class="main-header">
 
-    <div class="menu-header__wrapper">
-
-      <a class="menu-header__logo" href="index.html">
+    <nav class="main-header__nav">
+      <a class="main-header__logo" href="index.html">
         <img src="./src/images/logo.jfif" alt="logo">
       </a>
-
-      <nav class="menu-header__nav">
-        <ul>
-          <li><a href="#">меню</a>
-          
-            <ul>
-              <li><a href="menu-salads.html">Салаты</a></li>
-              <li><a href="menu-hot_meal.html">Горячие блюда</a></li>
-              <li><a href="menu-desserts.html">Десерты</a></li>
-              <li><a href="menu-beverages.html">Напитки</a></li>
-            </ul>  
-          
-          </li>
-          <div class="header__nav-line"></div>
-          <li><a href="index.html">главная</a></li>
-          <div class="header__nav-line"></div>
-          <li><a href="booking.html">бронирование</a></li>
-          <div class="header__nav-line"></div>
-          <li><a href="contact.html">контакты</a></li>
-        </ul>
-      </nav>
-
-    </div>
-
-    <form class="menu-header__search">
-      <input class="menu-header__search-form" type="text" placeholder="Поиск по блюдам">
-      <button class="menu-header__search-btn" type="reset" title="Отчистить">x</button>
-    </form>
-
+      <ul>
+        <li>меню
+        
+          <ul>
+            <li><a href="menu-salads.html">Салаты</a></li>
+            <li><a href="menu-hot_meal.html">Горячие блюда</a></li>
+            <li><a href="menu-desserts.html">Десерты</a></li>
+            <li><a href="menu-beverages.html">Напитки</a></li>
+          </ul>  
+        
+        </li>
+        <div class="main-header__nav-line"></div>
+        <li><a href="booking.html">бронирование</a></li>
+        <div class="main-header__nav-line"></div>
+        <li><a href="contact.html">контакты</a></li>
+      </ul>
+    </nav>
+    
   </header>
 
   <main class="menu-main">
+
+    <form class="menu-main__search">
+      <input class="menu-main__search-form" type="text" placeholder="Поиск по блюдам">
+      <button class="menu-main__search-btn" type="reset" title="Отчистить">x</button>
+    </form> 
+
     <div class="menu-main__restaurant">
 
       <!--card-------------->
@@ -102,28 +96,28 @@
     </div>
   </main>
   
-  <footer class="footer">
+  <footer class="main-footer">
     
-    <div class="footer__network">
-      <p>#Гостидзе</p>
-      <a href="https://facebook.com">
-        <img src="./src/images/icon_facebook.png" alt="facebook icon">
-      </a>
-      <a href="https://instagram.com">
-        <img src="./src/images/icon_instagram.png" alt="instagram icon">
-      </a>
-      <a href="https://twitter.com">
-        <img src="./src/images/icon_twitter.png" alt="twitter icon">
-      </a>
-    </div>
+      <div class="main-footer__network">
+        <p>#Гостидзе</p>
+        <a href="https://facebook.com">
+          <img src="./src/images/icon_facebook.png" alt="facebook icon">
+        </a>
+        <a href="https://instagram.com">
+          <img src="./src/images/icon_instagram.png" alt="instagram icon">
+        </a>
+        <a href="https://twitter.com">
+          <img src="./src/images/icon_twitter.png" alt="twitter icon">
+        </a>
+      </div>
+      
+      <div class="main-footer__contact">
+        <p>г. Тбилиси, Грузия</p>
+        <p>ул. Белиашвили, 99</p>
+        <p>+995322005555</p>
+      </div>
     
-    <div class="footer__contact">
-      <p>г. Тбилиси, Грузия</p>
-      <p>ул. Белиашвили, 99</p>
-      <p>+995322005555</p>
-    </div>
-  
-  </footer>
+    </footer>
 
   <script src="build/js/script.js"></script>
 </body>

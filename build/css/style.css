@@ -155,73 +155,91 @@ body {
   .footer__network a:nth-child(odd) {
     margin: 0 15px; }
 
-.menu-header__logo img {
-  width: 150px;
-  height: 150px;
-  cursor: pointer;
-  margin: 20px 0 0 21px; }
-
-.menu-header__nav {
+.main-header__nav {
   display: -webkit-box;
   display: flex;
-  margin: 0 auto;
   font-size: 30px;
   font-weight: normal;
   font-family: 'Courier New', Courier, monospace; }
 
-.menu-header__nav ul {
+.main-header__logo img {
+  width: 150px;
+  height: 120px;
+  margin: 10px 0 auto 10px; }
+
+.main-header__logo:hover img {
+  -webkit-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9); }
+
+.main-header__nav ul {
   margin: auto;
   display: grid;
   grid-template-columns: auto 6px auto 6px auto 6px auto;
-  grid-template-rows: 50px;
-  margin: 0 auto;
-  padding: 0; }
+  grid-template-rows: 50px; }
 
-.menu-header__nav ul li {
+.main-header__nav ul li {
   padding: 10px;
   list-style: none;
   text-transform: uppercase;
-  background-color: #071625; }
+  background-color: #071625;
+  z-index: 1; }
 
-.menu-header__nav ul > li:hover,
-.menu-header__nav ul ul > li:hover {
+.main-header__nav ul > li:hover,
+.main-header__nav ul ul > li:hover {
   background-color: #183553;
   cursor: pointer; }
 
-.menu-header__nav ul ul {
+.main-header__nav ul ul {
   display: none;
   list-style: none;
   text-decoration: none; }
 
-.menu-header__nav ul li:hover ul {
-  display: -webkit-box;
-  display: flex; }
+.main-header__nav ul li:hover ul {
+  display: block;
+  padding: 0; }
 
-.menu-header__nav ul li {
+.main-header__nav ul li {
   width: 240px;
   text-align: center; }
 
-.menu-header__nav ul li a {
+.main-header__nav ul li a {
   text-decoration: none;
   line-height: 30px;
   color: #99854d;
   margin: 0 15px;
   cursor: pointer; }
 
-.menu-header__nav ul li {
+.main-header__nav ul li {
   color: #99854d; }
 
-.menu-header__nav-line {
+.main-header__nav-line {
   background-color: #fff;
   line-height: 30px; }
 
-.menu-header__search {
+.main-footer {
+  background-color: #071625;
+  color: #99854d;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 60px;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold; }
+  .main-footer__network a {
+    cursor: pointer;
+    text-decoration: none; }
+  .main-footer__network a:nth-child(odd) {
+    margin: 0 15px; }
+
+.menu-main__search {
   position: relative;
-  margin: 85px auto 0;
+  margin: 25px auto 0;
   width: 96%;
   cursor: pointer; }
 
-.menu-header__search-form {
+.menu-main__search-form {
   width: 100%;
   height: 48px;
   border: 0;
@@ -230,7 +248,7 @@ body {
   font-size: 18px;
   color: black; }
 
-.menu-header__search-btn {
+.menu-main__search-btn {
   display: block;
   position: absolute;
   right: 0;
@@ -289,77 +307,6 @@ body {
   color: #99854d;
   background-color: #071625; }
 
-.footer {
-  background-color: #071625;
-  color: #99854d;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  padding: 60px;
-  margin-top: 50px;
-  font-size: 25px;
-  font-weight: bold; }
-  .footer__network a {
-    cursor: pointer;
-    text-decoration: none; }
-  .footer__network a:nth-child(odd) {
-    margin: 0 15px; }
-
-.booking-header__nav {
-  display: -webkit-box;
-  display: flex;
-  top: 20px;
-  left: 20px;
-  font-size: 30px;
-  font-weight: normal;
-  font-family: 'Courier New', Courier, monospace; }
-
-.booking-header__logo img {
-  width: 150px;
-  height: 120px; }
-
-.booking-header__nav ul {
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto 6px auto 6px auto 6px auto;
-  grid-template-rows: 50px; }
-
-.booking-header__nav ul li {
-  padding: 10px;
-  list-style: none;
-  text-transform: uppercase;
-  background-color: #071625; }
-
-.booking-header__nav ul > li:hover,
-.booking-header__nav ul ul > li:hover {
-  background-color: #183553;
-  cursor: pointer; }
-
-.booking-header__nav ul ul {
-  display: none;
-  list-style: none;
-  text-decoration: none; }
-
-.booking-header__nav ul li:hover ul {
-  display: -webkit-box;
-  display: flex; }
-
-.booking-header__nav ul li {
-  width: 240px;
-  text-align: center; }
-
-.booking-header__nav ul li a {
-  text-decoration: none;
-  line-height: 30px;
-  color: #99854d;
-  margin: 0 15px;
-  cursor: pointer; }
-
-.booking-header__nav-line {
-  background-color: #fff;
-  line-height: 30px; }
-
 .booking-main {
   margin: 60px auto 20px;
   width: 790px;
@@ -383,54 +330,8 @@ body {
     text-align: center;
     line-height: 45px; }
 
-.contact-header {
-  margin-bottom: 50px; }
-  .contact-header__nav {
-    display: -webkit-box;
-    display: flex;
-    top: 20px;
-    left: 20px;
-    font-size: 30px;
-    font-weight: normal;
-    font-family: 'Courier New', Courier, monospace; }
-  .contact-header__logo {
-    margin: 20px 0 0 20px;
-    width: 150px;
-    height: 120px; }
-  .contact-header__nav ul {
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto 6px auto 6px auto 6px auto;
-    grid-template-rows: 50px; }
-  .contact-header__nav ul li {
-    padding: 10px;
-    list-style: none;
-    text-transform: uppercase;
-    background-color: #071625; }
-  .contact-header__nav ul > li:hover,
-  .contact-header__nav ul ul > li:hover {
-    background-color: #183553;
-    cursor: pointer; }
-  .contact-header__nav ul ul {
-    display: none;
-    list-style: none;
-    text-decoration: none; }
-  .contact-header__nav ul li:hover ul {
-    display: inline-block; }
-  .contact-header__nav ul li {
-    width: 240px;
-    text-align: center; }
-  .contact-header__nav ul li a {
-    text-decoration: none;
-    line-height: 30px;
-    color: #99854d;
-    margin: 0 15px;
-    cursor: pointer; }
-  .contact-header__nav-line {
-    background-color: #fff;
-    line-height: 30px; }
-
 .contact-main {
+  margin-top: 30px;
   background-color: #99854d;
   border: 3px solid #071625;
   color: #071625;
@@ -449,13 +350,8 @@ body {
     margin: 0 15px; }
 
 @media (max-width: 600px) {
-  .footer {
-    display: block; } }
-
-@media (min-width: 601px) and (max-width: 1000px) {
-  .footer {
-    display: -webkit-box;
-    display: flex; } }
+  .main__container {
+    padding: 20px; } }
 
 @media (max-width: 1000px) {
   .header__nav {
@@ -466,9 +362,7 @@ body {
   .header__nav ul ul {
     padding: 0; }
   .header__nav ul li {
-    width: auto; }
-  .footer__map {
-    display: none; } }
+    width: auto; } }
 
 @media (min-width: 1001px) and (max-width: 1010px) {
   .header__nav {
@@ -480,6 +374,45 @@ body {
     padding: 0; }
   .header__nav ul li {
     width: auto; } }
+
+@media (max-width: 850px) {
+  .main-header__nav {
+    font-size: 25px;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around; }
+  .main-header__logo img {
+    margin: 0; }
+  .main-header__nav ul {
+    margin: 0;
+    display: inline-block;
+    padding: 0; }
+  .main-header__nav ul ul {
+    padding: 0; }
+  .main-header__nav ul li {
+    width: auto; } }
+
+@media (min-width: 851px) and (max-width: 1050px) {
+  .main-header__nav {
+    font-size: 25px;
+    display: grid; }
+  .main-header__logo {
+    text-decoration: none;
+    width: 170px; }
+  .main-header__logo img {
+    margin: 10px auto 0 10px; }
+  .main-header__nav ul {
+    margin: 0;
+    display: inline-block;
+    padding: 0 10px; }
+  .main-header__nav ul ul {
+    padding: 0; }
+  .main-header__nav ul li {
+    width: auto; } }
+
+@media (max-width: 600px) {
+  .main-footer {
+    display: block; } }
 
 @media (max-width: 600px) {
   .menu-main {
@@ -493,7 +426,7 @@ body {
       margin: auto;
       display: block; } }
 
-@media (min-width: 601px) and (max-width: 1000px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .menu-main {
     width: 595px;
     margin: 30px auto 0; }
@@ -504,32 +437,24 @@ body {
       width: 290px;
       height: 190px;
       margin: auto;
-      display: block; }
-  .footer {
-    margin-top: 10px; } }
+      display: block; } }
 
-@media (max-width: 1000px) {
-  .menu-header__wrapper {
-    display: -webkit-box;
-    display: flex;
-    justify-content: space-around; }
-  .menu-header__logo img {
-    margin: 0; }
-  .menu-header__nav {
-    font-size: 25px;
-    margin: 0; }
-  .menu-header__nav ul {
-    margin: auto;
-    display: inline-block; }
-  .menu-header__nav ul ul {
-    padding: 0; }
-  .menu-header__nav ul li {
-    width: auto;
-    display: grid; }
-  .menu-header__nav ul li:hover ul {
-    display: inline-block; }
-  .menu-header__search {
-    margin: 20px auto 0; } }
+@media (min-width: 901px) and (max-width: 1050px) {
+  .menu-main {
+    width: 780px;
+    margin: 30px auto 0; }
+    .menu-main__search {
+      width: 99%; }
+    .menu-main__restaurant {
+      grid-template-columns: repeat(3, 250px);
+      padding: 0; }
+    .menu-main__image {
+      width: 250px;
+      height: 160px;
+      margin: auto;
+      display: block; }
+    .menu-main__weight {
+      width: 45%; } }
 
 @media (max-width: 600px) {
   .booking-main {
@@ -556,22 +481,6 @@ body {
       grid-column-end: 3; } }
 
 @media (min-width: 801px) and (max-width: 1000px) {
-  .booking-header__nav {
-    font-size: 25px;
-    margin: 0; }
-  .booking-header__logo {
-    margin-left: auto; }
-  .booking-header__nav ul {
-    margin: auto;
-    padding: 0;
-    display: inline-block; }
-  .booking-header__nav ul ul {
-    padding: 0; }
-  .booking-header__nav ul li {
-    width: auto;
-    display: grid; }
-  .booking-header__nav ul li:hover ul {
-    display: inline-block; }
   .booking-main {
     width: 640px;
     display: block;
@@ -584,23 +493,5 @@ body {
       width: 100%; } }
 
 @media (max-width: 1000px) {
-  .booking-header__nav {
-    font-size: 25px;
-    margin: 0; }
-  .booking-header__logo {
-    margin-left: auto; }
-  .booking-header__nav ul {
-    margin: auto;
-    padding: 0;
-    display: inline-block; }
-  .booking-header__nav ul ul {
-    padding: 0; }
-  .booking-header__nav ul li {
-    width: auto;
-    display: grid; }
-  .booking-header__nav ul li:hover ul {
-    display: inline-block; } }
-
-@media (max-width: 600px) {
   .contact-main {
     display: block; } }

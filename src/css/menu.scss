@@ -1,77 +1,7 @@
-.menu-header {
-
-  &__logo img {
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
-    margin: 20px 0 0 21px;
-  }
-
-  &__nav {
-    display: flex;
-    margin: 0 auto;
-    font-size: 30px;
-    font-weight: normal;
-    font-family: 'Courier New', Courier, monospace;
-  }
-
-  &__nav ul {
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto 6px auto 6px auto 6px auto;
-    grid-template-rows: 50px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  &__nav ul li {
-    padding: 10px;
-    list-style: none;
-    text-transform: uppercase;
-    background-color: #071625;
-  }
-
-  &__nav ul > li:hover,
-  &__nav ul ul > li:hover {
-    background-color: #183553;
-    cursor: pointer;
-  }
-
-  &__nav ul ul {
-    display: none;
-    list-style: none;
-    text-decoration: none;
-  }
-
-  &__nav ul li:hover ul {
-    display: flex;
-  }
-
-  &__nav ul li {
-    width: 240px;
-    text-align: center;
-  }
-
-  &__nav ul li a {
-    text-decoration: none;
-    line-height: 30px;
-    color: #99854d;
-    margin: 0 15px;
-    cursor: pointer;
-  }
-
-  &__nav ul li {
-    color: #99854d;
-  }
-
-  &__nav-line {
-    background-color: #fff;
-    line-height: 30px;
-  }
-
+.menu-main {
   &__search {
     position: relative;
-    margin: 85px auto 0;
+    margin: 25px auto 0;
     width: 96%;
     cursor: pointer;
   }
@@ -85,7 +15,7 @@
     font-size: 18px;
     color: black;
   }
-
+    
   &__search-btn {
     display: block;
     position: absolute;
@@ -98,9 +28,6 @@
     background-color: white;
     cursor: pointer;
   }
-}
-
-.menu-main {
 
   &__restaurant {
     padding: 40px;
@@ -150,25 +77,5 @@
   &__weight:hover {
     color: #99854d;
     background-color: #071625;
-  }
-}
-
-.footer {
-  background-color: #071625;
-  color: #99854d;
-  display: flex;
-  justify-content: space-between;
-  padding: 60px;
-  margin-top: 50px;
-  font-size: 25px;
-  font-weight: bold;
-
-  &__network a {
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  &__network a:nth-child(odd) {
-    margin: 0 15px;
   }
 }
