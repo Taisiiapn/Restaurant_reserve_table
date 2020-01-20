@@ -1,138 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="build/css/style.css">
-  <title>Restaurant</title>
-</head>
-<body>
-  
-  <header class="main-header">
+<main class="menu-main">
 
-    <nav class="main-header__nav">
-      <a class="main-header__logo" href="index.html">
-        <img src="./src/images/logo.jfif" alt="logo">
-      </a>
-      <ul>
-        <li>меню
-        
-          <ul>
-            <li><a href="menu-salads.html">Салаты</a></li>
-            <li><a href="menu-hot_meal.html">Горячие блюда</a></li>
-            <li><a href="menu-desserts.html">Десерты</a></li>
-            <li><a href="menu-beverages.html">Напитки</a></li>
-          </ul>  
-        
-        </li>
-        <div class="main-header__nav-line"></div>
-        <li><a href="booking.html">бронирование</a></li>
-        <div class="main-header__nav-line"></div>
-        <li><a href="contact.html">контакты</a></li>
-      </ul>
-    </nav>
-  
-  </header>
+  <form class="menu-main__search">
+    <input class="menu-main__search-form" type="text" onkeyup="search()" placeholder="Поиск по блюдам">
+    <button class="menu-main__search-btn" type="reset" title="Отчистить">x</button>
+  </form>
 
-  <main class="menu-main">
+  <input type="radio" id="alphabet" class="menu-main__sort-alphabet" name="radio" onclick="sortByAlphabet()">
+  <label for="alphabet">Сортировать по алфавиту</label>
 
-    <form class="menu-main__search">
-      <input class="menu-main__search-form" type="text" placeholder="Поиск по блюдам">
-      <button class="menu-main__search-btn" type="reset" title="Отчистить">x</button>
-    </form>
+  <input type="radio" id="weight" class="menu-main__sort-weight" name="radio" onclick="sortByWeight()">
+  <label for="weight">Сортировать по весу блюда</label>
 
-    <div class="menu-main__restaurant">
+  <div class="menu-main__restaurant">
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/soup-chihirtma.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Суп Чихиртма с курицей</h3>
-        <p class="menu-main__weight">200 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="3">
+      <img class="menu-main__image" src="./src/images/menu/soup-chihirtma.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Суп Чихиртма с курицей</h3>
+      <p class="menu-main__weight">200 гр</p>
+    </article>
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/soup-harcho.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Суп Харчо</h3>
-        <p class="menu-main__weight">300 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="8">
+      <img class="menu-main__image" src="./src/images/menu/soup-harcho.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Суп Харчо</h3>
+      <p class="menu-main__weight">300 гр</p>
+    </article>
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/meal-achma.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Горячее блюдо Ачма</h3>
-        <p class="menu-main__weight">200 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="2">
+      <img class="menu-main__image" src="./src/images/menu/meal-achma.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Ачма</h3>
+      <p class="menu-main__weight">190 гр</p>
+    </article>
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/meal-chachushuli.jpg" alt="meal photo">
-        <h3 class="menu-main__title">Горячее блюдо Чачушули</h3>
-        <p class="menu-main__weight">280 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="7">
+      <img class="menu-main__image" src="./src/images/menu/meal-chachushuli.jpg" alt="meal photo">
+      <h3 class="menu-main__title">Чачушули</h3>
+      <p class="menu-main__weight">290 гр</p>
+    </article>
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/meal-chmerkuli.jpg" alt="meal photo">
-        <h3 class="menu-main__title">Горячее блюдо Чмеркули</h3>
-        <p class="menu-main__weight">180 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="1">
+      <img class="menu-main__image" src="./src/images/menu/meal-chmerkuli.jpg" alt="meal photo">
+      <h3 class="menu-main__title">Чмеркули</h3>
+      <p class="menu-main__weight">180 гр</p>
+    </article>
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/meal-hachapuri-adj.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Горячее блюдо Хачапури по-аджарски</h3>
-        <p class="menu-main__weight">300 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="9">
+      <img class="menu-main__image" src="./src/images/menu/meal-hachapuri-adj.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Хачапури по-аджарски</h3>
+      <p class="menu-main__weight">320 гр</p>
+    </article>
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/meal-hachapuri.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Горячее блюдо Хачапури</h3>
-        <p class="menu-main__weight">280 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="6">
+      <img class="menu-main__image" src="./src/images/menu/meal-hachapuri.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Хачапури</h3>
+      <p class="menu-main__weight">280 гр</p>
+    </article>
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/meal-hinkali.jpg" alt="meal photo">
-        <h3 class="menu-main__title">Горячее блюдо Хинкали</h3>
-        <p class="menu-main__weight">240 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="4">
+      <img class="menu-main__image" src="./src/images/menu/meal-hinkali.jpg" alt="meal photo">
+      <h3 class="menu-main__title">Хинкали</h3>
+      <p class="menu-main__weight">240 гр</p>
+    </article>
 
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/meal-sadj.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Горячее блюдо Садж</h3>
-        <p class="menu-main__weight">250 гр</p>
-      </article>
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="5">
+      <img class="menu-main__image" src="./src/images/menu/meal-sadj.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Садж</h3>
+      <p class="menu-main__weight">250 гр</p>
+    </article>
 
-    </div>
-  </main>
-  
-  <footer class="main-footer">
-    
-    <div class="main-footer__network">
-      <p>#Гостидзе</p>
-      <a href="https://facebook.com">
-        <img src="./src/images/icon_facebook.png" alt="facebook icon">
-      </a>
-      <a href="https://instagram.com">
-        <img src="./src/images/icon_instagram.png" alt="instagram icon">
-      </a>
-      <a href="https://twitter.com">
-        <img src="./src/images/icon_twitter.png" alt="twitter icon">
-      </a>
-    </div>
-    
-    <div class="main-footer__contact">
-      <p>г. Тбилиси, Грузия</p>
-      <p>ул. Белиашвили, 99</p>
-      <p>+995322005555</p>
-    </div>
-  
-  </footer>
+  </div>
 
-  <script src="build/js/script.js"></script>
-</body>
-</html>
+</main>

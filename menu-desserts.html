@@ -1,124 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="build/css/style.css">
-  <title>Restaurant</title>
-</head>
-<body>
-  
-  <header class="main-header">
+<main class="menu-main">
 
-    <nav class="main-header__nav">
-      <a class="main-header__logo" href="index.html">
-        <img src="./src/images/logo.jfif" alt="logo">
-      </a>
-      <ul>
-        <li>меню
-        
-          <ul>
-            <li><a href="menu-salads.html">Салаты</a></li>
-            <li><a href="menu-hot_meal.html">Горячие блюда</a></li>
-            <li><a href="menu-desserts.html">Десерты</a></li>
-            <li><a href="menu-beverages.html">Напитки</a></li>
-          </ul>  
-        
-        </li>
-        <div class="main-header__nav-line"></div>
-        <li><a href="booking.html">бронирование</a></li>
-        <div class="main-header__nav-line"></div>
-        <li><a href="contact.html">контакты</a></li>
-      </ul>
-    </nav>
-  
-  </header>
+  <form class="menu-main__search">
+    <input class="menu-main__search-form" type="text" onkeyup="search()" placeholder="Поиск по блюдам">
+    <button class="menu-main__search-btn" type="reset" title="Отчистить">x</button>
+  </form>
 
-  <main class="menu-main">
-
-    <form class="menu-main__search">
-      <input class="menu-main__search-form" type="text" placeholder="Поиск по блюдам">
-      <button class="menu-main__search-btn" type="reset" title="Отчистить">x</button>
-    </form>
-
-    <div class="menu-main__restaurant">
-     
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/desert-burbushela.jpg" alt="meal photo">
-        <h3 class="menu-main__title">Бурбушела<h3>
-        <p class="menu-main__weight">200 гр</p>
-      </article>
-
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/desert-churchhela.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Чурчхела<h3>
-        <p class="menu-main__weight">220 гр</p>
-      </article>
-
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/desert-gosinaki.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Гозинаки<h3>
-        <p class="menu-main__weight">180 гр</p>
-      </article>
-
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/desert-mushmula.jpg" alt="meal photo">
-        <h3 class="menu-main__title">Мушмула<h3>
-        <p class="menu-main__weight">210 гр</p>
-      </article>
-
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/desert-pelamushi-grape.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Пеламуши с виноградом<h3>
-        <p class="menu-main__weight">200 гр</p>
-      </article>
-
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/desert-pelamushi.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Пеламуши с ежевикой<h3>
-        <p class="menu-main__weight">180 гр</p>
-      </article>
-
-      <!--card-------------->
-      <article class="menu-main__item">
-        <img class="menu-main__image" src="./src/images/menu/dessert-pastila.jfif" alt="meal photo">
-        <h3 class="menu-main__title">Пастила<h3>
-        <p class="menu-main__weight">180 гр</p>
-      </article>
-
-    </div>
-  </main>
-  
-  <footer class="main-footer">
+  <div class="menu-main__restaurant">
     
-    <div class="main-footer__network">
-      <p>#Гостидзе</p>
-      <a href="https://facebook.com">
-        <img src="./src/images/icon_facebook.png" alt="facebook icon">
-      </a>
-      <a href="https://instagram.com">
-        <img src="./src/images/icon_instagram.png" alt="instagram icon">
-      </a>
-      <a href="https://twitter.com">
-        <img src="./src/images/icon_twitter.png" alt="twitter icon">
-      </a>
-    </div>
-    
-    <div class="main-footer__contact">
-      <p>г. Тбилиси, Грузия</p>
-      <p>ул. Белиашвили, 99</p>
-      <p>+995322005555</p>
-    </div>
-  
-  </footer>
+    <!--card-------------->
+    <article class="menu-main__item">
+      <img class="menu-main__image" src="./src/images/menu/desert-burbushela.jpg" alt="meal photo">
+      <h3 class="menu-main__title">Бурбушела<h3>
+      <p class="menu-main__weight">200 гр</p>
+    </article>
 
-  <script src="build/js/script.js"></script>
-</body>
-</html>
+    <!--card-------------->
+    <article class="menu-main__item">
+      <img class="menu-main__image" src="./src/images/menu/desert-churchhela.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Чурчхела<h3>
+      <p class="menu-main__weight">220 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item">
+      <img class="menu-main__image" src="./src/images/menu/desert-gosinaki.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Гозинаки<h3>
+      <p class="menu-main__weight">180 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item">
+      <img class="menu-main__image" src="./src/images/menu/desert-mushmula.jpg" alt="meal photo">
+      <h3 class="menu-main__title">Мушмула<h3>
+      <p class="menu-main__weight">210 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item">
+      <img class="menu-main__image" src="./src/images/menu/desert-pelamushi-grape.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Пеламуши с виноградом<h3>
+      <p class="menu-main__weight">200 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item">
+      <img class="menu-main__image" src="./src/images/menu/desert-pelamushi.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Пеламуши с ежевикой<h3>
+      <p class="menu-main__weight">180 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item">
+      <img class="menu-main__image" src="./src/images/menu/dessert-pastila.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Пастила<h3>
+      <p class="menu-main__weight">180 гр</p>
+    </article>
+
+  </div>
+  
+</main>

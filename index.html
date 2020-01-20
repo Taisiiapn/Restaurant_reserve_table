@@ -4,65 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'sha256-ThhI8UaSFEbbl6cISiZpnJ4Z44uNSq2tPKgyRTD3LyU='"> -->
   <link rel="stylesheet" href="build/css/style.css">
+  <link rel="shortcut icon" href="./src/images/favicon/favicon.jfif">
   <title>Restaurant</title>
 </head>
+
 <body>
-  
   <header class="header">
-
-    <div class="header__slider-wrapper">
-      <div class="header__slider-container">
-        <img src="./src/images/header-slider-1.jpg" alt="Georgia photo">
-        <img src="./src/images/header-slider-2.jpg" alt="Georgia photo">
-        <img src="./src/images/header-slider-3.jpg" alt="Georgia photo">
-        <img src="./src/images/header-slider-4.jpg" alt="Georgia photo">
-        <img src="./src/images/header-slider-5.jfif" alt="Georgia photo">
-      </div>
-      <div class="header__slider-btn--left"></div>
-      <div class="header__slider-btn--right"></div>
-    </div>
-
     <nav class="header__nav">
-      <img class="header__logo" src="./src/images/logo.jfif" alt="logo">
+      <a class="header__logo" href="index.html">
+        <img src="./src/images/logo.jfif" alt="logo">
+      </a>
       <ul>
         <li>меню
         
           <ul>
-            <li><a href="menu-salads.html">Салаты</a></li>
-            <li><a href="menu-hot_meal.html">Горячие блюда</a></li>
-            <li><a href="menu-desserts.html">Десерты</a></li>
-            <li><a href="menu-beverages.html">Напитки</a></li>
+            <li><a href="#" onclick="showContent('menu-salads.html')">Салаты</a></li>
+            <li><a href="#" onclick="showContent('menu-hot_meal.html')">Горячие блюда</a></li>
+            <li><a href="#" onclick="showContent('menu-desserts.html')">Десерты</a></li>
+            <li><a href="#" onclick="showContent('menu-beverages.html')">Напитки</a></li>
           </ul>  
         
         </li>
         <div class="header__nav-line"></div>
-        <li><a href="booking.html">бронирование</a></li>
+        <li><a href="#" onclick="showContent('booking.html')">бронирование</a></li>
         <div class="header__nav-line"></div>
-        <li><a href="contact.html">контакты</a></li>
+        <li><a href="#" onclick="showContent('contact.html')">контакты</a></li>
       </ul>
     </nav>
-
   </header>
 
-  <main class="main">
-    <div class="main__container">
-      <h1 class="main__title">Здесь блюда тбилисской кухни готовят в 
-        атмосфере вечного лета, а подают их с 
-        традиционным грузинским гостеприимством
-      </h1>
-      <p class="main__description">Городская суета, вечная спешка 
-        и усталость… Иногда хочется оказаться там, где течет другая – 
-        размеренная жизнь. Ресторан "Гостидзе" - уникальное место, 
-        где слились воедино стильный интерьер, грузинская кухня, летняя терраса и 
-        потрясающий вид. Это то место, где можно окунуться в 
-        атмосферу романтики, наблюдать потрясающую природу 
-        или раствориться в собственных мыслях…
-      </p>
-    </div>
+  <div id="contentBody">
+    <main class="main">
 
-    <div class="main__slider-wrapper">
-      <div class="main__slider-container">
+      <div class="main__slider-wrapper">
+        <div class="main__slider-container">
+          <img src="./src/images/header-slider-1.jpg" alt="Georgia photo">
+          <img src="./src/images/header-slider-2.jpg" alt="Georgia photo">
+          <img src="./src/images/header-slider-3.jpg" alt="Georgia photo">
+          <img src="./src/images/header-slider-4.jpg" alt="Georgia photo">
+          <img src="./src/images/header-slider-5.jfif" alt="Georgia photo">
+        </div>
+        <div class="main__slider-btn--left"></div>
+        <div class="main__slider-btn--right"></div>
+      </div>
+
+      <div class="main__container">
+        <h1 class="main__title">Здесь блюда тбилисской кухни готовят в 
+          атмосфере вечного лета, а подают их с 
+          традиционным грузинским гостеприимством
+        </h1>
+        <p class="main__description">Городская суета, вечная спешка 
+          и усталость… Иногда хочется оказаться там, где течет другая – 
+          размеренная жизнь. Ресторан "Гостидзе" - уникальное место, 
+          где слились воедино стильный интерьер, грузинская кухня, летняя терраса и 
+          потрясающий вид. Это то место, где можно окунуться в 
+          атмосферу романтики, наблюдать потрясающую природу 
+          или раствориться в собственных мыслях…
+        </p>
+      </div>
+
+      <div class="main__gallery-container">
         <img src="./src/images/gallery-slider-1.jpg" alt="restaurant photo">
         <img src="./src/images/gallery-slider-2.jfif" alt="restaurant photo">
         <img src="./src/images/gallery-slider-3.jfif" alt="restaurant photo">
@@ -73,31 +76,13 @@
         <img src="./src/images/gallery-slider-8.jfif" alt="restaurant photo">
         <img src="./src/images/gallery-slider-9.jpg" alt="restaurant photo">
       </div>
-      <div class="main__slider-btn--left"></div>
-      <div class="main__slider-btn--right"></div>
-    </div>
-      
-    <!-- <div class="main__container-chef">
-      <img class="main__img" src="./src/images/chef.jpg" alt="chef`s photo">
-      <p class="main__chef-description">Текун Гачечиладзе - шеф-новатор, создатель новой грузинской кухни, 
-        возглавивший гастрономическую революцию в Грузии. Шеф учился в США в 
-        кулинарной академии Нью-Йорка, несколько лет работал в разных ресторанах, 
-        оттачивая технику и обрастая опытом. После чего он вернулсь в родной Тбилиси
-        и поставил перед собой цель переосмыслить классическую кухню, создав в 
-        результате свою концепцию и философию грузинской кухни. «Грузины ненавидят 
-        меня», - говорит шеф. Харчо он варит с креветками, а из горной форели, 
-        которую традиционно жарят, делает тартар с аджикой, в баже добавляет миндаль. 
-        Тем не менее многие созданные им блюда уже стали грузинской классикой, 
-        которые можно встретить во многих ресторанах страны. Текун впервые приехал в 
-        Украину, чтобы принять участие в конгрессе шеф-поваров FONTEGRO 2018.
-      </p>
-    </div> -->
 
-  </main>
+    </main>
+  </div>
 
-  <footer class="main-footer">
+  <footer class="footer">
     
-    <div class="main-footer__network">
+    <div class="footer__network">
       <p>#Гостидзе</p>
       <a href="https://facebook.com">
         <img src="./src/images/icon_facebook.png" alt="facebook icon">
@@ -110,7 +95,7 @@
       </a>
     </div>
     
-    <div class="main-footer__contact">
+    <div class="footer__contact">
       <p>г. Тбилиси, Грузия</p>
       <p>ул. Белиашвили, 99</p>
       <p>+995322005555</p>
@@ -119,6 +104,6 @@
   </footer>
 
   <script src="build/js/script.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script> -->
 </body>
 </html>

@@ -1,21 +1,18 @@
 .contact-main {
   margin-top: 30px;
-  background-color: #99854d;
-  border: 3px solid #071625;
-  color: #071625;
-  display: flex;
-  justify-content: space-between;
-  padding: 60px;
+  background-color: #071625;
+  color: #99854d;
+  display: block;
+  padding: 60px 60px 1px;
   font-size: 25px;
   font-weight: bold;
   box-sizing: border-box;
+  text-align: center;
 
-  &__network a {
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  &__network a:nth-child(odd) {
-    margin: 0 15px;
+  iframe {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 400px;
   }
 }

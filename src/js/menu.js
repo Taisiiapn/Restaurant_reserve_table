@@ -1,29 +1,15 @@
-let photos = document.querySelectorAll('.main__slider-container img');
-let counter = 0;
-let mainBtnLeft = document.querySelector('.main__slider-btn--left');
-let mainBtnRight = document.querySelector('.main__slider-btn--right');
+function search() {
+  let input = document.querySelector('.menu-main__search-form');
+  let filterValue = input.value.toUpperCase();
+  let itemCards = document.querySelector('.menu-main__restaurant');
+  let card = itemCards.querySelectorAll('.menu-main__item');
 
-function gallerySlider() {
-  for (let i = 0; i < photos.length; i++) {
-    photos[i].classList.add('main__opacity0');
+  for (let i = 0; i < card.length; i++) {
+    let cardTitle = card[i].querySelectorAll('.menu-main__title')[0];
+    if (cardTitle.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+      card[i].style.display = "";
+    } else {
+      card[i].style.display = "none";
+    }
   }
-  photos[counter].classList.remove('main__opacity0');
 }
-
-mainBtnLeft.onclick = function() {
-  if (counter - 1 == -1) {
-    counter = photos.length - 1;
-  } else {
-    counter--;
-  }
-  gallerySlider();
-};
-  
-mainBtnRight.onclick = function() {
-  if (counter + 1 == photos.length) {
-    counter = 0;
-  } else {
-    counter++;
-  }
-  gallerySlider();
-};
