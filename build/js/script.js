@@ -67,6 +67,65 @@ btnRight.onclick = function() {
   }
   slider();
 };
+
+//--------------------------pagination
+
+const itemsArr = [...document.querySelectorAll('menu-main__item')];
+const parent = document.querySelector('.menu-main__restaurant');
+const paginationElem = document.querySelector('#pagination').textContent;
+console.log(paginationElem);
+
+let current_page = 1;
+let columns = 3;
+
+function DisplayList (items, columns_per_page, page) {
+	// wrapper.innerHTML = "";
+	page--;
+
+	let start = columns_per_page * page;
+	let end = start + columns_per_page;
+	let paginatedItems = items.slice(start, end);
+
+	// for (let i = 0; i < paginatedItems.length; i++) {
+	// 	let item = paginatedItems[i];
+		// let item_element = document.createElement('div');
+		// item_element.classList.add('item');
+		// item_element.innerText = item;
+		// wrapper.appendChild(item_element);
+	// }
+}
+
+function SetupPagination (items, wrapper, columns_per_page) {
+	wrapper.innerHTML = "";
+
+	let page_count = Math.ceil(items.length / columns_per_page);
+	for (let i = 1; i < page_count + 1; i++) {
+		let btn = PaginationButton(i, items);
+		wrapper.appendChild(btn);
+	}
+}
+
+function PaginationButton (page, items) {
+	let button = document.createElement('button');
+	button.innerText = page;
+
+	if (current_page == page) button.classList.add('active');
+
+	button.addEventListener('click', function () {
+		current_page = page;
+		DisplayList(items, parent, columns, current_page);
+
+		let current_btn = document.querySelector('.pagenumbers button.active');
+		current_btn.classList.remove('active');
+
+		button.classList.add('active');
+	});
+
+	return button;
+}
+
+DisplayList(itemsArr, columns, current_page);
+SetupPagination(itemsArr, paginationElem, columns);
 function search() {
   let input = document.querySelector('.menu-main__search-form');
   let filterValue = input.value.toUpperCase();
@@ -81,6 +140,34 @@ function search() {
       card[i].style.display = "none";
     }
   }
+}
+
+function sortByWeight() {
+  let items = document.querySelectorAll('.menu-main__item');
+  items = [].slice.call(items, 0);
+  let parent = items.map(el => {
+    return el.parentNode;
+  })
+  items.sort((a, b) => {
+    return a.getAttribute('data-sortByWeight') - b.getAttribute('data-sortByWeight');
+  }).forEach((el, i) => {
+    parent[i].appendChild(el);
+  })
+}
+
+function sortByAlphabet() {
+  let list = document.querySelector('.menu-main__restaurant');
+  let nodesToSort = list.querySelectorAll('.menu-main__item');
+  Array.prototype.map.call(nodesToSort, function(node) {
+    return {
+      node: node,
+      relevantText: node.querySelector('.menu-main__title').textContent
+    };
+  }).sort(function(a, b) {
+    return a.relevantText.localeCompare(b.relevantText);
+  }).forEach(function(item) {
+    list.appendChild(item.node);
+  })
 }
 //--------------------------booking button
 let inputsObj;

@@ -1,6 +1,13 @@
+
 body {
   margin: 0 auto;
   max-width: 1100px; }
+
+.header__sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%; }
 
 .header__nav {
   display: -webkit-box;
@@ -270,6 +277,36 @@ body {
   .menu-main__weight:hover {
     color: #99854d;
     background-color: #071625; }
+  .menu-main__pagination {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center; }
+  .menu-main__pagination button {
+    width: 50px;
+    height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #44AAEE;
+    margin: 5px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    color: #FFF;
+    font-size: 18px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); }
+  .menu-main__pagination button:hover {
+    background-color: #44EEAA; }
+  .menu-main__pagination button.active {
+    background-color: #44EEAA;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2); }
 
 .booking-main {
   margin: 60px auto 70px;

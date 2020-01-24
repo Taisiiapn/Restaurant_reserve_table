@@ -5,52 +5,58 @@
     <button class="menu-main__search-btn" type="reset" title="Отчистить">x</button>
   </form>
 
+  <input type="radio" id="alphabet" class="menu-main__sort-alphabet" name="radio" onclick="sortByAlphabet()">
+  <label for="alphabet">Сортировать по алфавиту</label>
+
+  <input type="radio" id="weight" class="menu-main__sort-weight" name="radio" onclick="sortByWeight()">
+  <label for="weight">Сортировать по весу блюда</label>
+
   <div class="menu-main__restaurant">
     
     <!--card-------------->
-    <article class="menu-main__item">
+    <article class="menu-main__item" data-sortByWeight="1">
       <img class="menu-main__image" src="./src/images/menu/desert-burbushela.jpg" alt="meal photo">
       <h3 class="menu-main__title">Бурбушела<h3>
-      <p class="menu-main__weight">200 гр</p>
+      <p class="menu-main__weight">160 гр</p>
     </article>
 
     <!--card-------------->
-    <article class="menu-main__item">
+    <article class="menu-main__item" data-sortByWeight="6">
       <img class="menu-main__image" src="./src/images/menu/desert-churchhela.jfif" alt="meal photo">
       <h3 class="menu-main__title">Чурчхела<h3>
       <p class="menu-main__weight">220 гр</p>
     </article>
 
     <!--card-------------->
-    <article class="menu-main__item">
+    <article class="menu-main__item" data-sortByWeight="3">
       <img class="menu-main__image" src="./src/images/menu/desert-gosinaki.jfif" alt="meal photo">
       <h3 class="menu-main__title">Гозинаки<h3>
-      <p class="menu-main__weight">180 гр</p>
+      <p class="menu-main__weight">190 гр</p>
     </article>
 
     <!--card-------------->
-    <article class="menu-main__item">
+    <article class="menu-main__item" data-sortByWeight="5">
       <img class="menu-main__image" src="./src/images/menu/desert-mushmula.jpg" alt="meal photo">
       <h3 class="menu-main__title">Мушмула<h3>
       <p class="menu-main__weight">210 гр</p>
     </article>
 
     <!--card-------------->
-    <article class="menu-main__item">
+    <article class="menu-main__item" data-sortByWeight="4">
       <img class="menu-main__image" src="./src/images/menu/desert-pelamushi-grape.jfif" alt="meal photo">
       <h3 class="menu-main__title">Пеламуши с виноградом<h3>
       <p class="menu-main__weight">200 гр</p>
     </article>
 
     <!--card-------------->
-    <article class="menu-main__item">
+    <article class="menu-main__item" data-sortByWeight="7">
       <img class="menu-main__image" src="./src/images/menu/desert-pelamushi.jfif" alt="meal photo">
       <h3 class="menu-main__title">Пеламуши с ежевикой<h3>
-      <p class="menu-main__weight">180 гр</p>
+      <p class="menu-main__weight">240 гр</p>
     </article>
 
     <!--card-------------->
-    <article class="menu-main__item">
+    <article class="menu-main__item" data-sortByWeight="2">
       <img class="menu-main__image" src="./src/images/menu/dessert-pastila.jfif" alt="meal photo">
       <h3 class="menu-main__title">Пастила<h3>
       <p class="menu-main__weight">180 гр</p>
