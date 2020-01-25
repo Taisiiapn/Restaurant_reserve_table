@@ -1,0 +1,81 @@
+<main class="menu-main">
+
+  <form class="menu-main__search">
+    <input class="menu-main__search-form" type="text" onkeyup="search()" placeholder="Поиск по блюдам">
+    <button class="menu-main__search-btn" type="reset" title="Отчистить">x</button>
+  </form>
+
+  <input type="radio" id="alphabet" class="menu-main__sort-alphabet" name="radio" onclick="sortByAlphabet()">
+  <label for="alphabet">Сортировать по алфавиту</label>
+
+  <input type="radio" id="weight" class="menu-main__sort-weight" name="radio" onclick="sortByWeight()">
+  <label for="weight">Сортировать по весу блюда</label>
+
+  <div class="menu-main__restaurant">
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="3">
+      <img class="menu-main__image" src="./src/images/menu/soup-chihirtma.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Чихиртма с курицей</h3>
+      <p class="menu-main__weight">200 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="8">
+      <img class="menu-main__image" src="./src/images/menu/soup-harcho.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Харчо</h3>
+      <p class="menu-main__weight">300 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="2">
+      <img class="menu-main__image" src="./src/images/menu/meal-achma.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Ачма</h3>
+      <p class="menu-main__weight">190 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="7">
+      <img class="menu-main__image" src="./src/images/menu/meal-chachushuli.jpg" alt="meal photo">
+      <h3 class="menu-main__title">Чачушули</h3>
+      <p class="menu-main__weight">290 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="1">
+      <img class="menu-main__image" src="./src/images/menu/meal-chmerkuli.jpg" alt="meal photo">
+      <h3 class="menu-main__title">Чмеркули</h3>
+      <p class="menu-main__weight">180 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="9">
+      <img class="menu-main__image" src="./src/images/menu/meal-hachapuri-adj.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Хачапури по-аджарски</h3>
+      <p class="menu-main__weight">320 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="6">
+      <img class="menu-main__image" src="./src/images/menu/meal-hachapuri.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Хачапури</h3>
+      <p class="menu-main__weight">280 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="4">
+      <img class="menu-main__image" src="./src/images/menu/meal-hinkali.jpg" alt="meal photo">
+      <h3 class="menu-main__title">Хинкали</h3>
+      <p class="menu-main__weight">240 гр</p>
+    </article>
+
+    <!--card-------------->
+    <article class="menu-main__item" data-sortByWeight="5">
+      <img class="menu-main__image" src="./src/images/menu/meal-sadj.jfif" alt="meal photo">
+      <h3 class="menu-main__title">Садж</h3>
+      <p class="menu-main__weight">250 гр</p>
+    </article>
+
+  </div>
+
+</main>

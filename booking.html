@@ -1,0 +1,102 @@
+<main class="booking-main">
+
+  <img class="booking-main__background"
+  src="./src/images/booking-page.jpg" alt="restaurant photo">
+  
+  <div>
+    <form class="booking-main__form" action="handler.php">
+      <fieldset>
+        <legend><b>Забронировать стол</b></legend>
+        <label for="name">Имя</label>
+        <input id="name" type="text" placeholder="Имя" name="name" 
+        maxlength="15" required>
+    
+        <label for="phone">Номер телефона</label>
+        <input type="tel" name="phone" placeholder="0501234567" 
+        id="phone" pattern="[0]{1}[0-9]{9}" required>
+
+        <label for="date">Выберите дату бронирования</label>
+        <input id="date" type="date" name="date" value="2020-01-27"
+        min="2020-01-27" max="2020-01-30" required>
+    
+        <label for="time-start">Выберите время бронирования с...</label>
+        <input id="time-start" type="time" name="time" 
+        min="10:00" max="22:00" required>
+
+        <label for="time-end">Выберите время бронирования до...</label>
+        <input id="time-end" type="time" name="time" 
+        min="10:00" max="23:00" required>
+        <br>
+        <input type="button" class="booking-main__btn" 
+        onclick="book()" value="Забронировать">
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="booking-main__wrapper">
+    
+    <div class="booking-main__table">
+      <p>6 мест</p>
+      <img src="./src/images/table-free.png" class="booking-main__table-free"
+      id="1" onclick="clickTable(1)" alt="photo table-free">
+      <img src="./src/images/table-reserved.png" class="booking-main__table-reserved"
+      id="11" alt="photo table-reserved">
+    </div>
+    <div class="booking-main__table">
+      <p>4 места</p>
+      <img src="./src/images/table-free.png" class="booking-main__table-free" 
+      id="2" onclick="clickTable(2)" alt="photo table-free">
+      <img src="./src/images/table-reserved.png" class="booking-main__table-reserved" 
+      id="12" alt="photo table-reserved">
+    </div>
+    <div class="booking-main__table">
+      <p>10 мест</p>
+      <img src="./src/images/table-free.png" class="booking-main__table-free" 
+      id="3" onclick="clickTable(3)" alt="photo table-free">
+      <img src="./src/images/table-reserved.png" class="booking-main__table-reserved" 
+      id="13" alt="photo table-reserved">
+    </div>
+    <div class="booking-main__table">
+      <p>4 места</p>
+      <img src="./src/images/table-free.png" class="booking-main__table-free" 
+      id="4" onclick="clickTable(4)" alt="photo table-free">
+      <img src="./src/images/table-reserved.png" class="booking-main__table-reserved" 
+      id="14" alt="photo table-reserved">
+    </div>
+    <div class="booking-main__table">
+      <p>8 мест</p>
+      <img src="./src/images/table-free.png" class="booking-main__table-free" 
+      id="5" onclick="clickTable(5)" alt="photo table-free">
+      <img src="./src/images/table-reserved.png" class="booking-main__table-reserved" 
+      id="15" alt="photo table-reserved">
+    </div>
+    <div class="booking-main__table">
+      <p>2 места</p>
+      <img src="./src/images/table-free.png" class="booking-main__table-free" 
+      id="6" onclick="clickTable(6)" alt="photo table-free">
+      <img src="./src/images/table-reserved.png" class="booking-main__table-reserved" 
+      id="16" alt="photo table-reserved">
+    </div>
+    <div class="booking-main__table">
+      <p>4 места</p>
+      <img src="./src/images/table-free.png" class="booking-main__table-free" 
+      id="7" onclick="clickTable(7)" alt="photo table-free">
+      <img src="./src/images/table-reserved.png" class="booking-main__table-reserved" 
+      id="17" alt="photo table-reserved">
+    </div>
+    <div class="booking-main__table booking-main__table-8">
+      <p>6 мест</p>
+      <img src="./src/images/table-free.png" class="booking-main__table-free" 
+      id="8" onclick="clickTable(8)" alt="photo table-free">
+      <img src="./src/images/table-reserved.png" class="booking-main__table-reserved" 
+      id="18" alt="photo table-reserved">
+    </div>
+  </div>
+  
+  <div class="booking-main__modal">
+    <input class="booking-main__modal-input" type="radio" onclick="modalClose()" id="reset">
+    <label class="booking-main__modal-close" for="reset"></label>
+    <p>Забронировано!</p>
+  </div>
+
+</main>
