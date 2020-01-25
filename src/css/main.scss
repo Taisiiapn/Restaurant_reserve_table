@@ -1,6 +1,9 @@
+@import "./fonts.scss";
+
 body {
   margin: 0 auto;
   max-width: 1100px;
+  font-family: 'SansationItalic', sans-serif;
 }
 
 .header {

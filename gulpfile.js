@@ -7,7 +7,6 @@ const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const deploy = require('gulp-gh-pages');
 
-// порядок подключения css
 const cssFiles = [
   './src/css/fonts.scss',
   './src/css/main.scss',
@@ -17,7 +16,6 @@ const cssFiles = [
   './src/css/media.scss'
 ]
 
-// порядок подключения js
 const jsFiles = [
   './src/js/lib.js',
   './src/js/main.js',
@@ -25,7 +23,7 @@ const jsFiles = [
   './src/js/booking.js'
 ]
 
-function styles() { // task for styles
+function styles() {
   return gulp.src(cssFiles)
   .pipe(sass().on('error', sass.logError))
   .pipe(concat('style.css'))
@@ -33,12 +31,11 @@ function styles() { // task for styles
     overrideBrowserslist: ['>0.1%'],
     cascade: false
   }))
-  //output folder
   .pipe(gulp.dest('./build/css'))
   .pipe(browserSync.stream());
 }
 
-function scripts() { // task for scripts
+function scripts() {
   return gulp.src(jsFiles)
   .pipe(concat('script.js'))
   .pipe(gulp.dest('./build/js'))
@@ -61,16 +58,13 @@ function watch() {
   gulp.watch('./*.html').on('change', browserSync.reload);
 }
 
-// вызывает ф-ии styles / scripts
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('del', clean);
-// следить за всеми изменениями
 gulp.task('watch', watch);
-// удаляет все в build, снова строит папки (styles, scripts)
 gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
 gulp.task('dev', gulp.series('build', 'watch'));
 gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
+  return gulp.src("./build/**/*")
     .pipe(deploy())
 });
