@@ -5,7 +5,6 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
-const deploy = require('gulp-gh-pages');
 
 const cssFiles = [
   './src/css/fonts.scss',
@@ -52,7 +51,6 @@ function watch() {
       baseDir: "./"
     }
   });
-  // следить за css / js / html
   gulp.watch('./src/css/**/*.scss', styles)
   gulp.watch('./src/js/**/*.js', scripts)
   gulp.watch('./*.html').on('change', browserSync.reload);
@@ -64,7 +62,3 @@ gulp.task('del', clean);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
 gulp.task('dev', gulp.series('build', 'watch'));
-gulp.task('deploy', function () {
-  return gulp.src("./build/**/*")
-    .pipe(deploy())
-});
