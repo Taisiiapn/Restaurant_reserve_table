@@ -120,21 +120,19 @@ body {
   .main__slider-container .main__opacity0 {
     opacity: 0; }
   .main__slider-btn--left {
-    background: url(/src/images/btn-left.png) no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 48%;
+    top: 45%;
     left: 10px;
     cursor: pointer; }
   .main__slider-btn--right {
-    background: url(/src/images/btn-right.png) no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 48%;
+    top: 45%;
     right: 10px;
     cursor: pointer; }
   .main__container {
@@ -257,8 +255,10 @@ body {
     display: none; }
   .menu-main__restaurant {
     padding: 40px;
+    display: -ms-grid;
     display: grid;
     margin-top: 15px;
+    -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px; }
   .menu-main__item-alcohol, .menu-main__item-non-alcohol {
@@ -406,7 +406,9 @@ body {
     display: block;
     font: 15px 'Fira Sans', sans-serif; }
   .booking-main__wrapper {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 250px 20px 250px 20px 250px;
     grid-template-columns: repeat(3, 250px);
     grid-row-gap: 20px;
     grid-column-gap: 20px; }
@@ -600,7 +602,9 @@ body {
     width: 85%;
     margin: 20px auto 0; }
     .booking-main__wrapper {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 150px [2];
       grid-template-columns: repeat(2, 150px);
       margin: 0 auto;
       width: 320px; }
@@ -620,7 +624,9 @@ body {
     display: block;
     margin: 20px auto 0; }
     .booking-main__wrapper {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 200px [2];
       grid-template-columns: repeat(2, 200px); }
     .booking-main__table img {
       width: 200px; }
@@ -635,7 +641,9 @@ body {
     display: block;
     margin: 20px auto 0; }
     .booking-main__wrapper {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 200px [3];
       grid-template-columns: repeat(3, 200px); }
     .booking-main__table img {
       width: 200px; }
