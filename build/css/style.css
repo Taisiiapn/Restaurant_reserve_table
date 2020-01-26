@@ -119,8 +119,7 @@ body {
     transition: all ease 1s; }
   .main__slider-container .main__opacity0 {
     opacity: 0; }
-  .main__slider-btn--left {
-    background-size: contain;
+  .main__slider-btn--left, .main__slider-btn--right {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -128,13 +127,7 @@ body {
     left: 10px;
     cursor: pointer; }
   .main__slider-btn--right {
-    background-size: contain;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 45%;
-    right: 10px;
-    cursor: pointer; }
+    right: 10px; }
   .main__container {
     padding: 60px; }
   .main__title {
