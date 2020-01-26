@@ -183,7 +183,9 @@
     margin: 20px auto 0;
 
     &__wrapper {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: (150px)[2];
       grid-template-columns: repeat(2, 150px);
       margin: 0 auto;
       width: 320px;
@@ -215,7 +217,9 @@
     margin: 20px auto 0;
 
     &__wrapper {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: (200px)[2];
       grid-template-columns: repeat(2, 200px);
     }
 
@@ -240,7 +244,9 @@
     margin: 20px auto 0;
 
     &__wrapper {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: (200px)[3];
       grid-template-columns: repeat(3, 200px);
     }
 

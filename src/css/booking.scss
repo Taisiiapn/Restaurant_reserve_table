@@ -91,7 +91,9 @@
   }
   
   &__wrapper {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 250px 20px 250px 20px 250px;
     grid-template-columns: repeat(3, 250px);
     grid-row-gap: 20px;
     grid-column-gap: 20px;

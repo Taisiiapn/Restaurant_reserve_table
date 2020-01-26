@@ -36,11 +36,6 @@ body {
   }
 
   &__nav ul {
-    // margin: auto;
-    // display: grid;
-    // grid-template-columns: auto 6px auto 6px auto;
-    // grid-template-rows: 50px;
-    // grid-column-gap: 15px;
     margin: auto;
     display: -ms-grid;
     display: grid;
@@ -174,12 +169,6 @@ body {
   }
 
   &__gallery-container {
-    // display: grid;
-    // grid-template-columns: repeat(3, 300px);
-    // grid-column-gap: 20px;
-    // grid-row-gap: 20px;
-    // width: 940px;
-    // margin: 0 auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (300px)[3];

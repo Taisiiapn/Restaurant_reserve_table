@@ -101,8 +101,10 @@
 
   &__restaurant {
     padding: 40px;
+    display: -ms-grid;
     display: grid;
     margin-top: 15px;
+    -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
