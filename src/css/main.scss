@@ -131,8 +131,7 @@ body {
     opacity: 0;
   }
 
-  &__slider-btn--left,
-  &__slider-btn--right {
+  &__slider-btn--left {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -142,7 +141,12 @@ body {
   }
 
   &__slider-btn--right {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 45%;
     right: 10px;
+    cursor: pointer;
   }
 
   &__container {
