@@ -44,8 +44,11 @@ body {
 
 .header__nav ul {
   margin: auto;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 6px auto 6px auto;
   grid-template-columns: auto 6px auto 6px auto;
+  -ms-grid-rows: 50px;
   grid-template-rows: 50px;
   grid-column-gap: 15px; }
 
@@ -144,7 +147,9 @@ body {
   .main__description {
     font-size: 25px; }
   .main__gallery-container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 300px [3];
     grid-template-columns: repeat(3, 300px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
