@@ -167,8 +167,8 @@ body {
   &__gallery-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (300px)[3];
-        grid-template-columns: repeat(3, 300px);
+    -ms-grid-columns: 300px 300px 300px;
+    grid-template-columns: repeat(3, 300px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     width: 940px;
