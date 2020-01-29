@@ -120,19 +120,25 @@ body {
   .main__slider-container .main__opacity0 {
     opacity: 0; }
   .main__slider-btn--left {
-    width: 40px;
-    height: 40px;
     position: absolute;
     top: 45%;
     left: 10px;
+    background-color: inherit;
+    border: none;
+    outline: none;
     cursor: pointer; }
+  .main__slider-btn--left::before {
+    content: url(/src/images/btn-left.png); }
   .main__slider-btn--right {
-    width: 40px;
-    height: 40px;
     position: absolute;
     top: 45%;
     right: 10px;
+    background-color: inherit;
+    border: none;
+    outline: none;
     cursor: pointer; }
+  .main__slider-btn--right::before {
+    content: url(/src/images/btn-right.png); }
   .main__container {
     padding: 60px; }
   .main__title {
@@ -189,17 +195,28 @@ body {
     width: 96%;
     cursor: pointer; }
   .menu-main__search-form {
-    width: 100%;
+    width: 95%;
     height: 48px;
     border: 0;
     border-bottom: 1px solid #757575;
     opacity: 0.6;
     font-size: 18px;
-    color: black; }
+    color: black;
+    padding: 0 15px; }
+  .menu-main__search-form::-webkit-input-placeholder {
+    color: #332e2e; }
+  .menu-main__search-form::-moz-placeholder {
+    color: #332e2e; }
+  .menu-main__search-form:-ms-input-placeholder {
+    color: #332e2e; }
+  .menu-main__search-form::-ms-input-placeholder {
+    color: #332e2e; }
+  .menu-main__search-form::placeholder {
+    color: #332e2e; }
   .menu-main__search-btn {
     display: block;
     position: absolute;
-    right: 0;
+    right: 3%;
     top: 30%;
     width: 20px;
     border: none;
@@ -259,8 +276,7 @@ body {
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px; }
-  .menu-main__item-alcohol, .menu-main__item-non-alcohol {
-    padding: 0 0 20px;
+  .menu-main__item {
     display: block; }
   .menu-main__image {
     width: 330px;
@@ -294,36 +310,6 @@ body {
   .menu-main__weight:hover {
     color: #99854d;
     background-color: #071625; }
-  .menu-main__pagination {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center; }
-  .menu-main__pagination button {
-    width: 50px;
-    height: 50px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: #44AAEE;
-    margin: 5px;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    color: #FFF;
-    font-size: 18px;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); }
-  .menu-main__pagination button:hover {
-    background-color: #44EEAA; }
-  .menu-main__pagination button.active {
-    background-color: #44EEAA;
-    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2); }
 
 .booking-main {
   margin: 60px auto 70px;

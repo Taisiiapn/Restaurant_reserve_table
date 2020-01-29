@@ -14,6 +14,13 @@ function search() {
   }
 }
 
+function reternItems() {
+  let card = document.querySelectorAll('.menu-main__item');
+  for (let i = 0; i < card.length; i++) {
+    card[i].style.display = "block";
+  }
+}
+
 function sortByWeight() {
   let items = document.querySelectorAll('.menu-main__item');
   items = [].slice.call(items, 0);

@@ -9,19 +9,24 @@
   }
 
   &__search-form {
-    width: 100%;
+    width: 95%;
     height: 48px;
     border: 0;
     border-bottom: 1px solid #757575;
     opacity: 0.6;
     font-size: 18px;
     color: black;
+    padding: 0 15px;
+  }
+
+  &__search-form::placeholder {
+    color: rgb(51, 46, 46);
   }
     
   &__search-btn {
     display: block;
     position: absolute;
-    right: 0;
+    right: 3%;
     top: 30%;
     width: 20px;
     border: none;
@@ -109,9 +114,7 @@
     gap: 15px;
   }
 
-  &__item-alcohol,
-  &__item-non-alcohol {
-    padding: 0 0 20px;
+  &__item {
     display: block;
   }
 
@@ -151,43 +154,5 @@
   &__weight:hover {
     color: #99854d;
     background-color: #071625;
-  }
-
-  //------------pagination
-  
-  &__pagination {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  &__pagination button {
-    width: 50px;
-    height: 50px;
-  
-    appearance: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  
-    background-color: #44AAEE;
-  
-    margin: 5px;
-    transition: 0.4s;
-  
-    color: #FFF;
-    font-size: 18px;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  &__pagination button:hover {
-    background-color: #44EEAA;
-  }
-  
-  &__pagination button.active {
-    background-color: #44EEAA;
-    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
   }
 }
